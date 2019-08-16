@@ -1,0 +1,13 @@
+git init            = inicializa un repositorio local, por default es la carpeta master donde hiran todos los commits que se envien
+git status          = muestra el status de los archivos que estan dentro del repositorio 
+git rm --cached .   = remueve de la memoria ram (Staging area) los archivos trackeados
+git config --list   = lista las configuraciones de git
+git config --list --show-origin = muestra donde estan establecidas las configuraciones, los archivos donde estan localizados
+git config --global user.name "$namePerson" = setea el nombre del usuario de los commits
+git config --global user.email $email = setea el email del usuario de los commits.
+git log $nameFile   = muestra los cambios commiteados que ha sufrido un archivos
+
+Notas:
+-char == --string,  se usa char cuando el comando puede recibir argumentos de caracter que equivalen a poner con dos guiones el string del argumento completo. Ejemplo: git config -l == git config --list 
+.                   representa a la carpeta actual
+..                  representa a la carpeta padre que contiene a la actual 
