@@ -7,9 +7,10 @@ git config --global user.name "$nameUser" = setea el nombre del usuario de los c
 git config --global user.email $email = setea el email del usuario de los commits.
 git log $nameFile   = muestra los cambios commiteados que ha sufrido un archivos
 git show $nameFile  = muestra el detalle de los cambios en un archivo especifico mostrando los cambios surgidos entre dos commits
+git diff $commitRecent $commitOld   = muestra las diferencias entre los dos commits puestos, del mas reciente contra el antiguo
 
 Notas:
 -char == --string,  se usa char cuando el comando puede recibir argumentos de caracter que equivalen a poner con dos guiones el string del argumento completo. Ejemplo: git config -l == git config --list 
 .                   representa a la carpeta actual
 ..                  representa a la carpeta padre que contiene a la actual 
-esc+shift+zz        para salir guardando en el edito VIM 
+esc+(shift+zz)      para salir guardando en el editor VIM, el mensaje del commit, cuando no se manda el argumento -m 
