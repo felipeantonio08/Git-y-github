@@ -15,6 +15,9 @@ git checkout $commit $nameFile      = nos mueve hacia la version determinada del
 git checkout master $nameFile       = nos devuelve al commit ultimo que hemos ingresado
 git commit -am "$message"           = nos hace la combinacion de add + commmit pero solo funciona si todos los archivos ya fueron commiteados alguna vez
 
+git branch $nameBranch      = nos crea una nueva rama sobre el commit sobre el que este posicionado el HEAD
+git checkaout $nameBranch   = nos posiciona el HEAD sobre el ultimo commit que contiene la rama a la que nos estamos cambiando 
+
 Notas:
 -char == --string,  se usa char cuando el comando puede recibir argumentos de caracter que equivalen a poner con dos guiones el string del argumento completo. Ejemplo: git config -l == git config --list 
 .                   representa a la carpeta actual
