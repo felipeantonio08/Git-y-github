@@ -13,6 +13,7 @@ git reset $commit --hard|--soft     = nos devuelve a determinado commit de forma
 git log --stat      = nos muestra el detalle de todos los archivos, indicandonos los cambios de cuantas lineas fueron insertadas y eliminadas
 git checkout $commit $nameFile      = nos mueve hacia la version determinada del commit indicado en el archivo especificado
 git checkout master $nameFile       = nos devuelve al commit ultimo que hemos ingresado
+git commit -am "$message"           = nos hace la combinacion de add + commmit pero solo funciona si todos los archivos ya fueron commiteados alguna vez
 
 Notas:
 -char == --string,  se usa char cuando el comando puede recibir argumentos de caracter que equivalen a poner con dos guiones el string del argumento completo. Ejemplo: git config -l == git config --list 
