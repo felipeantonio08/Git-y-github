@@ -36,4 +36,4 @@ esc+(shift+zz)      para salir guardando en el editor VIM, el mensaje del commit
 ***1                Antes de empezar a modificar una rama es bueno hacer la actualizacion de la secundaria con lo contenido en la master, adicional despues de hacer un merge y este entre en conflicto por las mismas lineas modificadas, se debe mandar un commit con los cambios aceptados
 -v                  es de verbal 
 unrelated histories, una historia se refiere al conjunto de commits, de dos ramas que no son iguales o no hay comunes, sucede cuando nos conectamos a un origen que tiene commits que no estan en el repositorio local
-origin\master       hace referencia a la rama master del repositorio remoto
+origin\master       hace referencia a la rama master del repositorio remoto, ORIGIN es el estandar utilizado pero puede ser el nombre deseado para definirlo
