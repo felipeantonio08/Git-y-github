@@ -10,6 +10,7 @@ git show $nameFile  = muestra el detalle de los cambios en un archivo especifico
 git diff $commit1 $commit2   = muestra las diferencias entre los dos commits puestos, el $commit2 respecto al $commit1
 git diff            = nos muestra la diferencia entre lo que esta en zona de staging con lo que esta en el disco duro, ejemplo cuando a un archivo le hemos dado un add y le hacemos cambios posteriores no habiendo hecho el commit
 git reset $commit --hard|--soft     = nos devuelve a determinado commit de forma brusca (borrando todo del control de versiones) o forma suave (dejando en el control de versiones los commits posteriores)
+git log --stat      = nos muestra el detalle de todos los archivos, indicandonos los cambios de cuantas lineas fueron insertadas y eliminadas
 
 Notas:
 -char == --string,  se usa char cuando el comando puede recibir argumentos de caracter que equivalen a poner con dos guiones el string del argumento completo. Ejemplo: git config -l == git config --list 
