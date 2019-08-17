@@ -45,6 +45,9 @@ git push origin --tags                  = se envian los tags al reposotorio remo
 git tag -d $name                        = para eliminar (delete) un tag definido por error pero de manera local
 git push origin :refs/tags/$name        = elimina del repositorio remoto un tag que identifica un release en github
 
+git show-branch --all                   = nos muestra todoas las ramas incluso las remotas y us historias
+gitk                                    = lo mismo que el comando anterior pero de forma grafica en aplicacion externa
+
 Notas:
 -char == --string,  se usa char cuando el comando puede recibir argumentos de caracter que equivalen a poner con dos guiones el string del argumento completo. Ejemplo: git config -l == git config --list 
 .                   representa a la carpeta actual
