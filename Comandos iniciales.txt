@@ -38,6 +38,13 @@ git log --all --graph                       = funcionamiento de las ramas
 git log --all --graph --decorate --oneline  = toda la historia comprimida
 alias tree="git log --all --graph --decorate --oneline"   = creando un alias de comando, funciona en linux
 
+git tag -a $name -m "$message" $commit  = definimos un nuevo tag asociado a determinado commit
+git tag                                 = muestra los tags definidos
+git show-ref --tags                     = muestra la asociacion del los tag con los commits
+git push origin --tags                  = se envian los tags al reposotorio remoto  
+git tag -d $name                        = para eliminar (delete) un tag definido por error pero de manera local
+git push origin :refs/tags/$name        = elimina del repositorio remoto un tag que identifica un release en github
+
 Notas:
 -char == --string,  se usa char cuando el comando puede recibir argumentos de caracter que equivalen a poner con dos guiones el string del argumento completo. Ejemplo: git config -l == git config --list 
 .                   representa a la carpeta actual
@@ -48,3 +55,4 @@ esc+(shift+zz)      para salir guardando en el editor VIM, el mensaje del commit
 unrelated histories, una historia se refiere al conjunto de commits, de dos ramas que no son iguales o no hay comunes, sucede cuando nos conectamos a un origen que tiene commits que no estan en el repositorio local
 origin\master       hace referencia a la rama master del repositorio remoto, ORIGIN es el estandar utilizado pero puede ser el nombre deseado para definirlo
 ***2                en su defecto se puede eliminar el origen establecido mediante. git remote rm origin, y despues volver a crearlo con la nueva url
+tags                los tags no entran como cambios pero si se deben enviar, los tags son utiles en github
