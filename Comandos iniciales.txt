@@ -28,6 +28,11 @@ git push origin $nameBranch = nos envia al origen definido la rama que especific
 git pull origin $nameBranch = del origen nos trae la rama que especificamos
 git pull origin $nameBranch --allow-unrelated-histories     = nos fusiona dos ramas del origen con la local con los commits que no estan relacionados  
 
+//se debe de registrar la llave publica antes en el servidor de github
+git remote set-url origin $url = setea una nueva url de conexion al repositorio remoto, se puede usar tanto para conexion ssh como https
+***2
+//realizar pull y push para verificar que se establezca conexion mediante la llave publica
+
 Notas:
 -char == --string,  se usa char cuando el comando puede recibir argumentos de caracter que equivalen a poner con dos guiones el string del argumento completo. Ejemplo: git config -l == git config --list 
 .                   representa a la carpeta actual
@@ -37,3 +42,4 @@ esc+(shift+zz)      para salir guardando en el editor VIM, el mensaje del commit
 -v                  es de verbal 
 unrelated histories, una historia se refiere al conjunto de commits, de dos ramas que no son iguales o no hay comunes, sucede cuando nos conectamos a un origen que tiene commits que no estan en el repositorio local
 origin\master       hace referencia a la rama master del repositorio remoto, ORIGIN es el estandar utilizado pero puede ser el nombre deseado para definirlo
+***2                en su defecto se puede eliminar el origen establecido mediante. git remote rm origin, y despues volver a crearlo con la nueva url
