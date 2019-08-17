@@ -33,6 +33,11 @@ git remote set-url origin $url = setea una nueva url de conexion al repositorio 
 ***2
 //realizar pull y push para verificar que se establezca conexion mediante la llave publica
 
+git log --all                               = en ocasiones no nos muestra todo
+git log --all --graph                       = funcionamiento de las ramas
+git log --all --graph --decorate --oneline  = toda la historia comprimida
+alias tree="git log --all --graph --decorate --oneline"   = creando un alias de comando, funciona en linux
+
 Notas:
 -char == --string,  se usa char cuando el comando puede recibir argumentos de caracter que equivalen a poner con dos guiones el string del argumento completo. Ejemplo: git config -l == git config --list 
 .                   representa a la carpeta actual
