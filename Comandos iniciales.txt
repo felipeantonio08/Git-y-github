@@ -32,6 +32,8 @@ git push origin $nameBranch = nos envia al origen definido la rama que especific
 git pull origin $nameBranch = del origen nos trae la rama que especificamos
 git pull origin $nameBranch --allow-unrelated-histories     = nos fusiona dos ramas del origen con la local con los commits que no estan relacionados  
 
+git clone $url              = nos unicamente la rama master hacia el repositorio local, nos enlaza el origin tambien
+
 //se debe de registrar la llave publica antes en el servidor de github
 git remote set-url origin $url      = setea una nueva url de conexion al repositorio remoto, se puede usar tanto para conexion ssh como https
 ***2
