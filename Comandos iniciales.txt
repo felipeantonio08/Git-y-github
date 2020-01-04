@@ -64,3 +64,9 @@ unrelated histories, una historia se refiere al conjunto de commits, de dos rama
 origin\master       hace referencia a la rama master del repositorio remoto, ORIGIN es el estandar utilizado pero puede ser el nombre deseado para definirlo
 ***2                en su defecto se puede eliminar el origen establecido mediante. git remote rm origin, y despues volver a crearlo con la nueva url
 tags                los tags no entran como cambios pero si se deben enviar, los tags son utiles en github
+
+
+Llaves publicas y privadas:
+ssh-keygen -t rsa -b 4096 -C "$email"       = -t el algoritmo de encripcion, -b complejidad del algoritmo, -C email al cual se asocian las llaves
+eval $(ssh-agent -s)                        = examinar si el agente de ssh esta corriendo
+ssh-add ~/.ssh/id_rsa                       = se agrega la llave privada al agente de ssh
