@@ -3,16 +3,18 @@ git status          = muestra el status de los archivos que estan dentro del rep
 git rm --cached .   = remueve de la memoria ram (Staging area) los archivos trackeados, se agrega -r para forma recursiva en carpetas
 git rm --force .    = remueve del repositorio los archivos y aparte tambien del staging area, es decir del disco duro
 git config --list   = lista las configuraciones de git
-git config --list --show-origin = muestra donde estan establecidas las configuraciones, los archivos donde estan localizados
-git config --global user.name "$nameUser" = setea el nombre del usuario de los commits
-git config --global user.email $email = setea el email del usuario de los commits.
-git log $nameFile   = muestra los cambios commiteados que ha sufrido un archivos
-git show $nameFile  = muestra el detalle de los cambios en un archivo especifico mostrando los cambios surgidos entre dos commits
-git diff $commit1 $commit2   = muestra las diferencias entre los dos commits puestos, el $commit2 respecto al $commit1
-git diff            = nos muestra la diferencia entre lo que esta en zona de staging con lo que esta en el disco duro, ejemplo cuando a un archivo le hemos dado un add y le hacemos cambios posteriores no habiendo hecho el commit
+git config --list --show-origin             = muestra donde estan establecidas las configuraciones, los archivos donde estan localizados
+git config --global user.name "$nameUser"   = setea el nombre del usuario de los commits
+git config --global user.email $email       = setea el email del usuario de los commits.
+
+git log $nameFile                   = muestra los cambios commiteados que ha sufrido un archivos
+git log --stat                      = nos muestra el detalle de todos los archivos, indicandonos los cambios de cuantas lineas fueron insertadas y eliminadas
+
+git show $nameFile                  = muestra el detalle de los cambios en un archivo especifico mostrando los cambios surgidos entre dos commits
+git diff $commit1 $commit2          = muestra las diferencias entre los dos commits puestos, el $commit2 respecto al $commit1
+git diff                            = nos muestra la diferencia entre lo que esta en zona de staging con lo que esta en el disco duro, ejemplo cuando a un archivo le hemos dado un add y le hacemos cambios posteriores no habiendo hecho el commit
 git reset $commit --hard|--soft     = nos devuelve a determinado commit de forma brusca (borrando todo del control de versiones) o forma suave (dejando en el control de versiones unicamente lo que tengamos en el staging area)
-git reset head [$nameFile]          = elimina del area de staging los archivos que han sido agregados a la misma, pero necesitan salir porque no se quieren enviar por no estar listos para este commit
-git log --stat      = nos muestra el detalle de todos los archivos, indicandonos los cambios de cuantas lineas fueron insertadas y eliminadas
+git reset head [$nameFile]          = elimina del area de staging los archivos que han sido agregados a la misma, pero necesitan salir porque no se quieren enviar por no estar listos para este commit 
 git checkout $commit $nameFile      = nos mueve hacia la version determinada del commit indicado en el archivo especificado
 git checkout master $nameFile       = nos devuelve al commit ultimo que hemos ingresado
 git commit -am "$message"           = nos hace la combinacion de add + commmit pero solo funciona si todos los archivos ya fueron commiteados alguna vez
@@ -54,6 +56,7 @@ Notas:
 -char == --string,  se usa char cuando el comando puede recibir argumentos de caracter que equivalen a poner con dos guiones el string del argumento completo. Ejemplo: git config -l == git config --list 
 .                   representa a la carpeta actual
 ..                  representa a la carpeta padre que contiene a la actual 
+esc+i               para entrar en mode escritura en el editor VIM 
 esc+(shift+zz)      para salir guardando en el editor VIM, el mensaje del commit, cuando no se manda el argumento -m 
 ***1                Antes de empezar a modificar una rama es bueno hacer la actualizacion de la secundaria con lo contenido en la master, adicional despues de hacer un merge y este entre en conflicto por las mismas lineas modificadas, se debe mandar un commit con los cambios aceptados
 -v                  es de verbal 
