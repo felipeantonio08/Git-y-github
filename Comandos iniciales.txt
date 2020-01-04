@@ -80,3 +80,12 @@ caracteristica de github que permite el poder aprobar determinados cambios antes
 es un paso previo a hacer el merge entre la rama feature y la rama de stagging develop para que otros miembros del equipo revisen los cambios
 Permite a otras personas que no son colaboradores del repositorio aportar
 Tambien existe en gitlab (merge request). bitbucket (push request)
+
+Fork: (https://platzi.com/clases/1557-git-github/19978-creando-un-fork-contribuyendo-a-un-repositorio/)
+Cuando se quiere trabajar con otros proyectos publicos de otras personas o de codigo abierto.
+1) se hace un fork del lado del proyecto publico, lo que nos crea uno de nuestro lado.
+2) se trabaja de igual forma subiendo los cambios realizados al proyecto de nuestro lado.
+3) cuando ya este listo el cambio se tiene que hacer un pull request del lado nuestro proyecto.
+4) cambia un poco la solicitud del pull request al comparado anteriormente ya que se selecciona el repositorio y rama a comparar, pero aqui solo se hace el pull request y no se puede definir como revisores,etc.
+5) del lado del proyecto original se hace la aprobacion o solicitud de cambios.
+6) el fork se puede quedar atras del proyecto original con el tiempo, lo que se puede hacer es definir un nuevo origen de repositio, por lo general se llamara "upstream" y pasarlo a la rama master local y despues subirlo
