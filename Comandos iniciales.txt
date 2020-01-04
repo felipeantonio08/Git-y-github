@@ -73,3 +73,10 @@ Llaves publicas y privadas:
 ssh-keygen -t rsa -b 4096 -C "$email"       = -t el algoritmo de encripcion, -b complejidad del algoritmo, -C email al cual se asocian las llaves
 eval $(ssh-agent -s)                        = examinar si el agente de ssh esta corriendo
 ssh-add ~/.ssh/id_rsa                       = se agrega la llave privada al agente de ssh
+
+Pull request: (https://platzi.com/clases/1557-git-github/19957-utilizando-pull-requests-en-github/)
+Nombre rama: fix-typo
+caracteristica de github que permite el poder aprobar determinados cambios antes que se haga el merge entre ramas
+es un paso previo a hacer el merge entre la rama feature y la rama de stagging develop para que otros miembros del equipo revisen los cambios
+Permite a otras personas que no son colaboradores del repositorio aportar
+Tambien existe en gitlab (merge request). bitbucket (push request)
