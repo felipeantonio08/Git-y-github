@@ -55,6 +55,9 @@ git push origin :refs/tags/$name        = elimina del repositorio remoto un tag 
 git show-branch --all                   = nos muestra todoas las ramas incluso las remotas y us historias
 gitk                                    = lo mismo que el comando anterior pero de forma grafica en aplicacion externa
 
+git rebase $nameBranch                  = realiza el proceso de llevar a cabo un reajuste entre ramas para no realizar un merge entre las mismas, esto es util para determinados casos de correcciones pequenas, pero no es aconsejable, ya que puede ocasionar grandes problemas y se pierde el seguimiento de que es lo que se hizo en determinada rama
+***4
+
 Notas:
 -char == --string,  se usa char cuando el comando puede recibir argumentos de caracter que equivalen a poner con dos guiones el string del argumento completo. Ejemplo: git config -l == git config --list 
 .                   representa a la carpeta actual
@@ -68,6 +71,7 @@ origin\master       hace referencia a la rama master del repositorio remoto, ORI
 ***2                en su defecto se puede eliminar el origen establecido mediante. git remote rm origin, y despues volver a crearlo con la nueva url
 tags                los tags no entran como cambios pero si se deben enviar, los tags son utiles en github
 ***3                se debe de dar permiso en las configuraciones del repositorio por parte del creador del mismo, si no al momente que se intente hacer un push dara error de permisos no autorizados
+***4                se realiza primero posicionado en la rama donde estamos haciendo los pequenos cambios, con el nombre de la rama que queremos tener los ultimos cambios, posterior se realiza posionado en la rama principal y con el nombre de la rama que tiene los cambios, por ultimo se puede eliminar la rama de los cambios ya que si es como si nunca se hubiera hecho nada en ella    
 
 Llaves publicas y privadas:
 ssh-keygen -t rsa -b 4096 -C "$email"       = -t el algoritmo de encripcion, -b complejidad del algoritmo, -C email al cual se asocian las llaves
