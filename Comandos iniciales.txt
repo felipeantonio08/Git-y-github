@@ -76,6 +76,8 @@ git cherry-pick $commit                 = para obtener un commit especifico que 
 *git add .
 git commit --amend                      = adjunta cambios agregados al stagin con el comando anterior(*) y los agrega como parte del commit ultimo, se puede enmendar tambien el comentario
 
+git reflog                              = nos muestra el verdadero flujo de todos los cambios en la historia (la verdadera historia), incluso si eliminamos commits, ramas y otros cambios, este nos los muestra. util para cuando se quiere restarurar a un reset --hard por un error cometido hacia una version establecidas
+
 Notas:
 -char == --string,  se usa char cuando el comando puede recibir argumentos de caracter que equivalen a poner con dos guiones el string del argumento completo. Ejemplo: git config -l == git config --list 
 .                   representa a la carpeta actual
