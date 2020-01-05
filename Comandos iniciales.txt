@@ -68,6 +68,8 @@ origin\master       hace referencia a la rama master del repositorio remoto, ORI
 ***2                en su defecto se puede eliminar el origen establecido mediante. git remote rm origin, y despues volver a crearlo con la nueva url
 tags                los tags no entran como cambios pero si se deben enviar, los tags son utiles en github
 ***3                se debe de dar permiso en las configuraciones del repositorio por parte del creador del mismo, si no al momente que se intente hacer un push dara error de permisos no autorizados
+.gitignore          archivo donde se describen que archivos no van al repositorio
+readme.md           se escribe con lenguaje de markdown y tambien html, pagina de ayuda: https://pandao.github.io/editor.md/en.html
 
 Llaves publicas y privadas:
 ssh-keygen -t rsa -b 4096 -C "$email"       = -t el algoritmo de encripcion, -b complejidad del algoritmo, -C email al cual se asocian las llaves
