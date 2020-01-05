@@ -78,6 +78,11 @@ git commit --amend                      = adjunta cambios agregados al stagin co
 
 git reflog                              = nos muestra el verdadero flujo de todos los cambios en la historia (la verdadera historia), incluso si eliminamos commits, ramas y otros cambios, este nos los muestra. util para cuando se quiere restarurar a un reset --hard por un error cometido hacia una version establecidas
 
+git grep $word                          = busca la palabra a buscar dentro de los archivos de codigo frecuentemente
+git grep -n $word                       = muestra la linea donde se encuentra la palabra y el archivo
+git grep -c $word                       = cuenta las veces que la palabra aparece en los archivos
+git log -S $word                        = busca la palabra pero dentro de los commits
+
 Notas:
 -char == --string,  se usa char cuando el comando puede recibir argumentos de caracter que equivalen a poner con dos guiones el string del argumento completo. Ejemplo: git config -l == git config --list 
 .                   representa a la carpeta actual
