@@ -73,6 +73,9 @@ git clean -f                            = borrar los archivos mencionados con el
 git cherry-pick $commit                 = para obtener un commit especifico que se encuentra en otra rama, a la rama en donde se este posicionado. El commit traido lo pega automaticamente sin necesidad de commitear en la rama posicionada
 ***6
 
+*git add .
+git commit --amend                      = adjunta cambios agregados al stagin con el comando anterior(*) y los agrega como parte del commit ultimo, se puede enmendar tambien el comentario
+
 Notas:
 -char == --string,  se usa char cuando el comando puede recibir argumentos de caracter que equivalen a poner con dos guiones el string del argumento completo. Ejemplo: git config -l == git config --list 
 .                   representa a la carpeta actual
