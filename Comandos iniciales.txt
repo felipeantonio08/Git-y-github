@@ -45,6 +45,7 @@ git log --all                               = en ocasiones no nos muestra todo
 git log --all --graph                       = funcionamiento de las ramas
 git log --all --graph --decorate --oneline  = toda la historia comprimida
 alias tree="git log --all --graph --decorate --oneline"   = creando un alias de comando, funciona en linux
+git log --oneline                           = cada commit en una sola linea
 
 git tag -a $name -m "$message" $commit  = definimos un nuevo tag asociado a determinado commit
 git tag                                 = muestra los tags definidos
@@ -62,12 +63,15 @@ git rebase $nameBranch                  = realiza el proceso de llevar a cabo un
 git stash                               = guarda los cambios realizados en memoria, nos sirve para poder cambiarnos a otra rama antes de hacer commit de los cambios realizados en la anterior
 git stash list                          = ver lo guardado en memoria sobre determinada rama
 git stash pop                           = para poder obtener de regreso lo que se encuentra en el stash
-git stash branch $nameBranch            = nos manda a una nueva rama los cambios que tenemos en la memoria con el stash
+git stash branch $nameBranch            = nos manda a una nueva rama los cambios que tenemos en la memoria con el stash, tambien realiza el checkout a esta nueva rama
 git stash drop                          = para eliminar los cambios almacenados en memoria
 ***5
 
 git clean --dry-run                     = para saber que archivos se borraran que son los que no estan trackeados hasta el momento, a excepcion de los archivos dentro de carpetas o los que se excluyen por el .gitignore
 git clean -f                            = borrar los archivos mencionados con el comando anterior
+
+git cherry-pick $commit                 = para obtener un commit especifico que se encuentra en otra rama, a la rama en donde se este posicionado. El commit traido lo pega automaticamente sin necesidad de commitear en la rama posicionada
+***6
 
 Notas:
 -char == --string,  se usa char cuando el comando puede recibir argumentos de caracter que equivalen a poner con dos guiones el string del argumento completo. Ejemplo: git config -l == git config --list 
@@ -84,6 +88,7 @@ tags                los tags no entran como cambios pero si se deben enviar, los
 ***3                se debe de dar permiso en las configuraciones del repositorio por parte del creador del mismo, si no al momente que se intente hacer un push dara error de permisos no autorizados
 ***4                se realiza primero posicionado en la rama donde estamos haciendo los pequenos cambios, con el nombre de la rama que queremos tener los ultimos cambios, posterior se realiza posionado en la rama principal y con el nombre de la rama que tiene los cambios, por ultimo se puede eliminar la rama de los cambios ya que si es como si nunca se hubiera hecho nada en ella    
 ***5                el stash no ayudaria para cuando queremos hacer cambios de prueba que en realidad no se saben si aplica o no
+***6                nos da problemas al momento de hacer un merge con la otra rama, porque detecta conflictos en ambas lineas que afecte todo el commit que trajimos con cherry-pick y por lo que seria de arreglarlos manualmente, no se recomienda utilizarlo frecuentemente
 
 Llaves publicas y privadas:
 ssh-keygen -t rsa -b 4096 -C "$email"       = -t el algoritmo de encripcion, -b complejidad del algoritmo, -C email al cual se asocian las llaves
