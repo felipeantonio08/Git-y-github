@@ -136,3 +136,4 @@ Cuando se quiere trabajar con otros proyectos publicos de otras personas o de co
 .gitignore          archivo donde se describen que archivos no van al repositorio
 readme.md           se escribe con lenguaje de markdown y tambien html, pagina de ayuda: https://pandao.github.io/editor.md/en.html
 github pages        se pueden utilizar paginas para entrada ya sea personales o para un proyecto, a traves de https://pages.github.com/ unicamente se habilita y por default se accede al readme como entrada por: $nameAccount.github.io/$nameRepositorio
+insights            muestra pull requests, issues, contribuyentes, frecuencia del codigo, forks, dependencias, network (es como el gitk)
