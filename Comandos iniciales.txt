@@ -20,6 +20,7 @@ git checkout master $nameFile       = nos devuelve al commit ultimo que hemos in
 git commit -am "$message"           = nos hace la combinacion de add + commmit pero solo funciona si todos los archivos ya fueron commiteados alguna vez
 
 git branch $nameBranch      = nos crea una nueva rama sobre el commit sobre el que este posicionado el HEAD
+git branch -D $nameBranch   = nos elimina la rama especifica
 git checkout $nameBranch    = nos posiciona el HEAD sobre el ultimo commit que contiene la rama a la que nos estamos cambiando 
 git merge $nameBranch       = nos ayuda a unificar los commits de la rama en la que estamos posicionados con el HEAD, con la rama que es pasada como argumento
 ***1
