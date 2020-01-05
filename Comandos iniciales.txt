@@ -83,6 +83,18 @@ git grep -n $word                       = muestra la linea donde se encuentra la
 git grep -c $word                       = cuenta las veces que la palabra aparece en los archivos
 git log -S $word                        = busca la palabra pero dentro de los commits
 
+git shortlog                            = log por persona y sus commits
+git shortlog -sn                        = numero de commits y las personas
+git shortlog -sn --all                  = igual que anterior pero cuenta commits borrados
+git shortlog -sn --all --no-merges      = igual que anterior pero excluye los commits por merges
+git config --global alias.$nameAlias "$commandWithoutGit"  = nos ayuda a crear un alias para hacer mas cortos los comandos, solo se pondria git $nameAlias, ejemplo =  git config --global alias.stats "shortlog -sn --all --no-merges" y se invoca ahora a git stats
+
+git blame $nameFile -c -L$1,$2          = muestra quien modifico que por cada una de las lineas, -c le da formato, -L limita el rango de las lineas a ver
+
+git branch -r                           = muestra rama remotas
+git branch -a                           = muestra todas las ramas incluso las remotas
+
+
 Notas:
 -char == --string,  se usa char cuando el comando puede recibir argumentos de caracter que equivalen a poner con dos guiones el string del argumento completo. Ejemplo: git config -l == git config --list 
 .                   representa a la carpeta actual
