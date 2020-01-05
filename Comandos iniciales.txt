@@ -66,6 +66,9 @@ git stash branch $nameBranch            = nos manda a una nueva rama los cambios
 git stash drop                          = para eliminar los cambios almacenados en memoria
 ***5
 
+git clean --dry-run                     = para saber que archivos se borraran que son los que no estan trackeados hasta el momento, a excepcion de los archivos dentro de carpetas o los que se excluyen por el .gitignore
+git clean -f                            = borrar los archivos mencionados con el comando anterior
+
 Notas:
 -char == --string,  se usa char cuando el comando puede recibir argumentos de caracter que equivalen a poner con dos guiones el string del argumento completo. Ejemplo: git config -l == git config --list 
 .                   representa a la carpeta actual
